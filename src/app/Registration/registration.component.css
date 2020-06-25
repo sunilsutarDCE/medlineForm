@@ -1,0 +1,29 @@
+
+h1,.h1,h2,.h2,h3,.h3
+{
+    font: inherit;
+    font-weight: 300;
+}
+
+h1,
+.h1 {    
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h2,
+.h2 {   
+    font-size: 1.5em;
+    margin: 0 0 0.5em;
+}
+
+h3,
+.h3 {   
+    font-size: 1em;
+    margin: 0 ;
+}
+form { width:80%}
+.form-group label {font-size:0.7em;text-transform: uppercase}
+.btn{width:100px;background-color: green;color:#fff;}
+.btn:hover{background: blue;}
+.alert{font-size:0.7em}

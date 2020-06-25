@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 formHeading noPadding">
+      <h3>USER INFORMATION</h3>
+      <hr class="noMargin m-sm-b" />
+    </div>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm)">
+            <div *ngIf="(submitClicked) || (registrationForm.invalid && registrationForm.touched)" class="alert alert-danger alert-dismissible fade show">
+              <strong>Error!</strong> Please review errors .
+            </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputEmail1">First Name *</label>
+            <input type="text" class="form-control" formControlName="firstname">            
+            <small *ngIf="(submitClicked && registrationForm.get('firstname').hasError('required') ) || (registrationForm.get('firstname').hasError('required') && registrationForm.get('firstname').touched)" 
+                class="alert-danger">
+                <i class="fas fa-exclamation-circle"></i>
+                First Name is required field </small>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Last Name *</label>
+            <input type="text" class="form-control" formControlName="lastname">
+            <small *ngIf="(submitClicked && registrationForm.get('lastname').hasError('required')) || (registrationForm.get('lastname').hasError('required') && registrationForm.get('lastname').touched)" 
+            class="alert-danger">
+            <i class="fas fa-exclamation-circle"></i>
+            Last Name is required field </small>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone *</label>
+            <input type="text" class="form-control" formControlName="phone">            
+            <small *ngIf="(submitClicked && registrationForm.get('phone').hasError('required')) || (registrationForm.get('phone').hasError('required') && registrationForm.get('phone').touched)" 
+            class="alert-danger">
+            <i class="fas fa-exclamation-circle"></i>
+            Phone is required field </small>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="exampleInputEmail1">EXT</label>
+            <input type="text" class="form-control" formControlName="ext">
+          </div>
+        </div>
+        <div class="col-sm-6"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="exampleInputPassword1">Email *</label>
+            <input type="email" class="form-control" formControlName="email">
+            <small *ngIf="(submitClicked && registrationForm.get('email').hasError('required')) || (registrationForm.get('email').hasError('required') && registrationForm.get('email').touched)" 
+                class="alert-danger">
+                <i class="fas fa-exclamation-circle"></i>
+                Email is required field </small>
+                <small *ngIf="(submitClicked && registrationForm.get('email').hasError('email')) || (registrationForm.get('email').hasError('email') && registrationForm.get('email').touched)" 
+                class="alert-danger">
+                <i class="fas fa-exclamation-circle"></i>
+                Email is invalid </small>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary float-right">NEXT</button>
+    </form>
+    <hr class="w-100" />
+  </div>
+</div>
