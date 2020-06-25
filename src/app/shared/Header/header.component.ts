@@ -4,7 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 @Component({
     selector: "app-header",
     template: ` <header>
-    <a routerLink="/"><img src="../../../assets/img/medline-logo.png" alt="Medline" /></a>
+    <a routerLink="/"><img class="logo" src="../../../assets/img/medline-logo.png" alt="Medline" /></a>
     <a *ngIf="isHomePage" class="btn btn-primary float-right" routerLink="/registration">Click here to Register</a>
     <hr />
     <h1>MEDLINE.COM</h1>

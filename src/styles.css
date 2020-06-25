@@ -4,6 +4,7 @@ body {
     margin: 15px;font-size:1em;
     font-family: 'Open Sans', sans-serif;
 }
+.logo{    max-height: 80px;}
 button,a{cursor: pointer;}
 
 .noPadding {
